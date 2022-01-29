@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ducks
 {
-    public abstract class Duck
+    public abstract class Duckk
     {
         public string swim()
         {
