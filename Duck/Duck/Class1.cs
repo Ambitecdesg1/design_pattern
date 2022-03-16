@@ -7,20 +7,31 @@ using System.Threading.Tasks;
 
 namespace Duck
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            Duckk[] duck = new Duckk[] { new MallardDuck(), new RedheadDuck() };
-
-            foreach (Duckk look in duck)
+            Duckk[] ducks = new Duckk[]
             {
-                Console.WriteLine(look.swim());
-                Console.WriteLine(look.quack());
-                Console.WriteLine(look.display());
+                new MallardDuck(),
+                new RedheadDuck(),
+                new RubberDuck(),
+                new DecoyDuck()
+            };
+            foreach (Duckk duck in ducks)
+            {
+                Console.WriteLine(duck.swim());
+                Console.WriteLine(duck.display());
+                if (duck is Flyable)
+                {
+                    Console.WriteLine((duck as Flyable).fly());
+                }
+                if (duck is Quackable)
+                {
+                    Console.WriteLine((duck as Quackable).quack());
+                }
             }
-
-                Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }
