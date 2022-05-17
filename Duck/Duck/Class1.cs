@@ -14,7 +14,7 @@ namespace Duck
             Duckk[] ducks = new Duckk[]
             {
                 new MallardDuck(),
-                new RedheadDuck(),
+                new RedheadDuck(), 
                 new RubberDuck(),
                 new DecoyDuck()
             };
@@ -35,3 +35,4 @@ namespace Duck
         }
     }
 }
+//123
